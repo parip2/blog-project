@@ -48,3 +48,34 @@ app.post('/posts', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
+
+
+// DELETE a post
+app.delete('/posts/:id', async (req, res) => {
+	const { id } = req.params;
+	try {
+	  await pool.query('DELETE FROM posts WHERE id = $1', [id]);
+	  res.status(200).send('Post deleted');
+	} catch (err) {
+	  console.error(err);
+	  res.status(500).send('Error deleting post');
+	}
+});
+
+app.put('/posts/:id', async (req, res) => {
+	const { id } = req.params;
+	const { title, content, author } = req.body;
+  
+	try {
+	  await pool.query(
+		'UPDATE posts SET title = $1, content = $2, author = $3 WHERE id = $4',
+		[title, content, author, id]
+	  );
+	  res.status(200).send('Post updated');
+	} catch (err) {
+	  console.error(err);
+	  res.status(500).send('Error updating post');
+	}
+});
+  
+  

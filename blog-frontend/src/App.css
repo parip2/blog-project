@@ -1,0 +1,126 @@
+/* Global styles */
+body {
+	font-family: 'Merriweather', 'Georgia', serif;
+	background-color: #eff6e0;
+	margin: 0;
+	padding: 0;
+	color: #03364a;
+  }
+  
+  /* Main container */
+  .App {
+	max-width: 720px;
+	margin: 0 auto;
+	padding: 2rem;
+  }
+  
+  /* Headings */
+  h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+	color: #03364a;
+	font-weight: 700;
+	letter-spacing: -0.5px;
+  }
+  
+  h2 {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	color: #03364a;
+	font-weight: 600;
+  }
+  
+  /* Form styles */
+  form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	margin-bottom: 2.5rem;
+  }
+  
+  /* Input & textarea styles */
+  input,
+  textarea {
+	padding: 0.75rem;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-family: 'Merriweather', 'Georgia', serif;
+	transition: border-color 0.2s ease;
+  }
+  
+  input:focus,
+  textarea:focus {
+	outline: none;
+	border-color: #598392;
+	box-shadow: 0 0 0 3px rgba(89, 131, 146, 0.2);
+  }
+  
+  /* Buttons */
+  button {
+	background-color: #598392;
+	color: white;
+	padding: 0.6rem 1.2rem;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  
+  button:hover {
+	background-color: #124559;
+  }
+  
+  button:active {
+	transform: scale(0.97);
+  }
+  
+  /* Post card styling */
+  .post-card {
+	background-color: white;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	padding: 1rem;
+	margin-bottom: 1.5rem;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  }
+  
+  /* Inside post card */
+  .post-card h3 {
+	margin: 0 0 0.5rem 0;
+	font-size: 1.3rem;
+	color: #03364a;
+  }
+  
+  .post-card p {
+	margin: 0.5rem 0;
+	line-height: 1.5;
+  }
+  
+  .post-card i {
+	font-size: 0.9rem;
+	color: #7e9580;
+  }
+  
+  /* Utility spacing for buttons inside post card */
+  .post-card button {
+	margin-right: 0.5rem;
+  }
+  
+  /* Responsive: stack inputs on small screens */
+  @media (max-width: 500px) {
+	form {
+	  flex-direction: column;
+	}
+  
+	input,
+	textarea {
+	  width: 100%;
+	}
+  
+	button {
+	  width: fit-content;
+	}
+  }
+  
