@@ -12,10 +12,10 @@ app.use(bodyParser.json());
 
 // Connect to PostgreSQL
 const pool = new Pool({
-  user: 'postgres',        // <-- replace with your Postgres username
+  user: 'postgres',
   host: 'localhost',
-  database: 'blogdb',    // <-- replace with your database name
-  password: 'Parme$an5555',// <-- replace with your Postgres password
+  database: 'blogdb',
+  password: 'Parme$an5555',
   port: 5432,
 });
 
@@ -62,6 +62,7 @@ app.delete('/posts/:id', async (req, res) => {
 	}
 });
 
+//EDIT
 app.put('/posts/:id', async (req, res) => {
 	const { id } = req.params;
 	const { title, content, author } = req.body;

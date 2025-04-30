@@ -14,7 +14,6 @@ function App() {
   const [editAuthor, setEditAuthor] = useState('');
 
 
-  // Fetch posts when page loads
   useEffect(() => {
     fetchPosts();
   }, []);
